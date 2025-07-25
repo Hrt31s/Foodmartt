@@ -8,10 +8,10 @@ function ProductCard({ product, cart, handleAddToCart }) {
   useEffect(() => {
     const found = cart.some((item) => item._id === product._id);
     setIsAdded(found);
-  }, [cart, product]);
+  }, [cart, product]);  
 
   const handleClick = (e) => {
-    e.preventDefault();
+      e.preventDefault();
     if (!isAdded) {
       handleAddToCart(product);
       setIsAdded(true);
