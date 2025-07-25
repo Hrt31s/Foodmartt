@@ -9,7 +9,7 @@ const AdminLayout = () => {
      <Sidebar/>
       <main className="flex-grow p-4">
         <Outlet /> 
-      </main>
+      </main>    
     </div>
   );
 };
