@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const express = require("express");
 const path = require("path");
 const multer = require("multer");
 
@@ -10,7 +10,7 @@ const {
 } = require("../Controllers/admincontroller.js");
 const verifyToken = require("../Middlewares/verifytoken.js");
 const fs = require("fs");
-const router = Router();
+const router = express.Router();
 
 router.post("/registeradmin", registeruserController);
 router.get("/alladmin", alluserController);

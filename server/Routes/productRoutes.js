@@ -1,4 +1,4 @@
-const {Router} = require ("express")
+const express = require("express")
 const multer = require("multer");
 const path = require("path");
 const upload = require("../Middlewares/upload");
@@ -25,7 +25,7 @@ const authMiddleware = require("../Middlewares/authmiddleware.js");
 const { reverse } = require("dns");
 // const { get } = require("http");
 
-const router = Router();
+const router = express.Router();
 
 
 router.post("/add", upload.single("img"), addproductcontroller);
